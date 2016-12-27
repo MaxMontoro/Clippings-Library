@@ -1,3 +1,4 @@
 .idea
 __pycache__
 clippings_venv
+.pyc
