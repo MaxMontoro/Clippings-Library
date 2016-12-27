@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+    {% if not entries %}
+        <h2> No results. </h2>
+{% else  %}
+<h2> {{entries[0].source}} </h2>
+     {% for entry in entries %}
+    {% if entries[loop.index-1].source != entries[loop.index - 2].source  and loop.index != 1 %}
+      <h2>{{ entry.source }} </h2>
+      {% endif %}
+<p> {{ entry.text }}</p>
+    {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+{% endif %}
+    {% if words %}
+        <h2>Words I looked up in this book: </h2>
+        {% for word in words %}
+        <p> {{ word }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

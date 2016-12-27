@@ -1,0 +1,17 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+
+<form action="{{ url_for('pre_filter_quotes') }}" method="post" class=filter_quotes>
+   <strong>Search for source:</strong>
+    <input name=text required />
+    <input type=submit value=Search>
+</form>
+
+<h3>Most popular books:</h3>
+
+    {% for entry in entries %}
+        <p>{{ entry[0] }} <a href="{{ url_for('filter_quotes', query=entry.source) }}"> {{ entry[1] }} quotes  </a></p>
+    {% endfor %}
+
+{% endblock %}
