@@ -8,8 +8,8 @@ Uses Flask and an underlying sqlite database.
 
 Coming soon, I promise.
 
-        $ initdb
         $ export FLASK_APP=clippings.py
+        $ initdb
         $ flask run
         
 Visit `http://0.0.0.0:8001/addall` to add all entries to the database.
