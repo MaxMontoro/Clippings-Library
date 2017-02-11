@@ -14,3 +14,7 @@ Coming soon, I promise.
         
 Visit `http://0.0.0.0:8001/addall` to add all entries to the database.
 Then visit `http://0.0.0.0:8001/` to see the homepage.
+
+## Screenshot 
+
+![screenshot](clippings_browser.png)
