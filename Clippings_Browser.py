@@ -4,7 +4,7 @@
 from collections import OrderedDict
 
 ''' CONSTANTS '''
-data = '/Users/baloghsamuel/python_projects/flask_projects/clippings/data/clippings_export.txt'  # exported from clippings.io
+data = '/Users/samu/Downloads/clippings_export.txt'  # exported from clippings.io
 clippings = '/Users/baloghsamuel/python_projects/flask_projects/clippings/data/my_clippings.txt'  # original Kindle clippings format
 quotes = OrderedDict()
 separator = ' -- '

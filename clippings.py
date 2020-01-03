@@ -6,7 +6,7 @@ from collections import OrderedDict
 
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template
 
-from Clippings_Browser import build_library
+from clippings_browser import build_library
 
 app = Flask(__name__)
 
@@ -48,8 +48,6 @@ quotes, _, _ = build_library()
 @app.cli.command('addall')
 @app.route('/addall', methods=['POST', 'GET'])
 def add_entry():
-    if not session.get('logged_in'):
-        abort(401)
     db = get_db()
     for source in quotes:
         for item in quotes[source]:
